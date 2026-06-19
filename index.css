@@ -1,0 +1,65 @@
+
+ h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            font-weight: bolder;
+            color: black;
+            text-align: left;
+        }
+h2{
+    text-align: left;
+    color: blue;
+}
+        body{box-sizing: content-box;
+        background-color: rgb(176, 162, 145);}
+
+       body{box-sizing: border-box;
+        background-color: antiquewhite;}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: aqua;
+    padding: 20px;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba rgb(21, 136, 21);
+}
+
+.navlogo{
+    color: blue;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0%;
+}
+
+.navitems{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.navitems ul li a{
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.navitems a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.product-image{
+    width: 300px;
+    border-radius: 10px;
+}

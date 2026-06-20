@@ -63,3 +63,204 @@ h2{
     width: 300px;
     border-radius: 10px;
 }
+/* ==========================================================================
+   1. Design Tokens & Reset
+   ========================================================================== */
+:root {
+    --primary-color: #2c3e50;    /* Sophisticated Dark Slate */
+    --accent-color: #b8977e;     /* Elegant Muted Gold/Taupe */
+    --text-color: #333333;       /* Off-black for readability */
+    --bg-light: #fdfbf7;         /* Warm, elegant off-white background */
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; /* Elegant serif for fashion */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. Typography & Headers
+   ========================================================================== */
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px 0 10px 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 50px 0 25px 0;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+    color: var(--accent-color);
+    text-transform: capitalize;
+}
+
+p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif for body text */
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   3. Navigation Bar
+   ========================================================================== */
+.header {
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navlogo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navitems {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navitems a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.navitems a:hover {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   4. Products & Grid Layout
+   ========================================================================== */
+/* Targets the ordered lists for your brands */
+ol, OL {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    list-style: none; /* Removes numbers for a cleaner look */
+    margin-bottom: 40px;
+}
+
+/* Styling each list item like a premium card */
+ol li, OL li {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; /* Ensures images scale beautifully without stretching */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.product-image:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   5. Interactive Elements Buttons
+   ========================================================================== */
+button#btn-el {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: var(--transition);
+}
+
+button#btn-el:hover {
+    background-color: var(--accent-color);
+}
+
+/* ==========================================================================
+   6. Blog & Content Sections
+   ========================================================================== */
+/* Simple card layouts for blog entries and contact details */
+.header > p, 
+h3 + p {
+    background: var(--white);
+    padding: 15px 20px;
+    border-left: 3px solid var(--accent-color);
+    box-shadow: var(--shadow);
+    border-radius: 0 4px 4px 0;
+}
